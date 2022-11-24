@@ -14,5 +14,19 @@
         <li><a href="/recipes/minestrone.html">Minestrone</a></li>
         <li><a href="/recipes/strawberry-bread.html">Strawberry Bread</a></li>
     </nav>
+
+    <h2>Add a Recipe</h2>
+    <form id="add-recipe">
+        <label for="recipe-name">Name of Recipe: </label>
+        <input type="text" name="recipe-name" id="recipe-name"><br />
+        <label for="author">Recipe Author</label>
+        <input type="text" name="author" id="author"><br />
+        <label for="recipe-description">Description:</label><br />
+        <textarea id="recipe-description" cols="30" rows="10">Enter your recipe description here...</textarea><br />
+        <input type="submit" value="Add To Recipes">
+    </form>
 </body>
+<footer>
+    <script src="/recipes/recipe-form.js"></script>
+</footer>
 </html>
