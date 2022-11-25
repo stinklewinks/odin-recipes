@@ -9,10 +9,21 @@ const recipes = {
 const form = document.getElementById('add-recipe');
 const recipeName = document.getElementById('recipe-name');
 const author = document.getElementById('author');
+const recipeDesc = document.getElementById('recipe-description');
+
+const outputForm = document.getElementById('output');
 
 const addToRecipes = (e) => {
     e.preventDefault();
-    recipes[recipeName.value] = author.value
+    let recipeNameData = recipeName.value;
+    let recipeAuthorData = author.value;
+    let recipeDescData = recipeDesc.value;
+
+    recipes[recipeNameData] = {
+        author: recipeAuthorData,
+        description: recipeDescData
+    };
+    console.log(recipes);
     form.reset();
 }
 
