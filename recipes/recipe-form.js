@@ -6,9 +6,11 @@ const recipes = {
         ingredients: ['Canned Tomatoes', 'Onions', 'Ground Meat'],
         prepTime: 45,
         cookTime: 25,
+        totalTime: this.prepTime + this.cookTime,
         steps: [],
         description: "This is a cool dish.",
         rating: 5,
+        notes: ""
     }
 }
 
@@ -18,6 +20,7 @@ const author = document.getElementById('author');
 const recipeDesc = document.getElementById('recipe-description');
 const stepsContainer = document.getElementById('steps-container');
 const addStepButton = document.getElementById('add-step');
+const removeStepButton = document.getElementById('remove-step');
 const steps = document.querySelectorAll('.step');
 
 
@@ -27,8 +30,16 @@ const addStep = () => {
     let step = document.createElement('input');
     let pageBreak = document.createElement('br');
     step.className = `step`;
+    step.id = 'new-step';
     stepsContainer.appendChild(step);
     stepsContainer.appendChild(pageBreak);
+}
+
+// TODO: Figure out the spacing & layout issues
+const removeStep = () => {
+    let step = document.querySelector('#new-step');
+    let pageBreak = document.querySelector('br');
+    step.remove();
 }
 
 const addToRecipes = (e) => {
@@ -49,3 +60,4 @@ const addToRecipes = (e) => {
 
 form.addEventListener('submit', addToRecipes);
 addStepButton.addEventListener('click', addStep);
+removeStepButton.addEventListener('click', removeStep);
