@@ -19,6 +19,7 @@ const recipeName = document.getElementById('recipe-name');
 const author = document.getElementById('author');
 const recipeDesc = document.getElementById('recipe-description');
 const stepsContainer = document.getElementById('steps-container');
+const notes = document.getElementById('notes');
 const addStepButton = document.getElementById('add-step');
 const removeStepButton = document.getElementById('remove-step');
 const steps = document.querySelectorAll('.step');
@@ -48,11 +49,15 @@ const addToRecipes = (e) => {
     let recipeAuthorData = author.value;
     let recipeDescData = recipeDesc.value;
     let stepsData = [steps[0].value, steps[1].value, steps[2].value];
+    let notesData = notes.value;
+
+// TODO: Create conditional function that checks the number of steps and if there's value conatined within them
 
     recipes[recipeNameData] = {
         author: recipeAuthorData,
         description: recipeDescData,
-        steps: [stepsData[0], stepsData[1], stepsData[2]]
+        steps: [stepsData[0], stepsData[1], stepsData[2]],
+        notes: notesData
     };
     console.log(recipes);
     form.reset();

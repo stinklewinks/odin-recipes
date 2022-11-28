@@ -1,11 +1,36 @@
+/* Import custom fonts */
+@import url("https://use.typekit.net/lkl6bnr.css");  /* Poppins */ 
+@import url("https://use.typekit.net/lkl6bnr.css");  /* Playfair Display */
+
 /* TODO: Create a base style for Mia Makes */
+:root {
+    --font-color: black;
+    --default: 1.2rem;
+    --heading: 1.5rem;
+}
+
 
 body {
     margin: auto;
     padding: 0.5rem;
+    color: var(--font-color);
+    font-size: var(--default);
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    font-family: playfair-display, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--heading);
 }
 
 li {
     list-style: none;
 }
+
+p, input, a {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}   
 
