@@ -43,10 +43,6 @@ p, input, a {
     height: 2.5vh;    
 }
 
-input {
-    margin: 0.5rem 0;
-}
-
 #step-one:invalid {
     color: red;
 }
@@ -58,5 +54,6 @@ input {
 .step {
     display: flex;
     flex-direction: column;
+    margin: 0.5rem 0;
 }
 

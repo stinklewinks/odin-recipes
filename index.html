@@ -8,7 +8,8 @@
     <title>Mia Makes</title>
 </head>
 <body>
-    <h1>Odin's Recipes</h1>
+    <h1>Welcome to Mia Makes</h1>
+    <p>A place for Mia's Creations</p>
     <nav>
         <li><a href="/recipes/lasagna.html">Lasagna</a></li>
         <li><a href="/recipes/grilled-cheese.html">Grilled Cheese</a></li>
@@ -22,14 +23,19 @@
     </div>
 
     <!-- TODO: Add a more detailed form to add a recipe -->
+    <!--  TODO: Add CSS feedback to the form including pseudos and animations. -->
+
     <h2>Add a Recipe</h2>
     <form id="add-recipe">
+        <p>Please enter the name of the recipe.</p>
         <label for="recipe-name">Name of Recipe: </label>
         <input type="text" name="recipe-name" id="recipe-name" required><br />
         <label for="author">Recipe Author</label>
         <input type="text" name="author" id="author" required><br />
+        <p>Describe the recipe in the clearest way possible. Tell a story how you found/came up with the recipe.</p>
         <label for="recipe-description">Description:</label><br />
         <textarea id="recipe-description" cols="30" rows="10" placeholder="Enter your recipe description here..."></textarea><br />
+        <p>Please add the steps to prepare the recipe below. Please be as specific as possible!</p>
         <label for="steps">Steps:</label><br />
         <div id="steps-container">
             <input type="text" name="steps" class="step" id="step-one" required><br />
@@ -37,6 +43,7 @@
             <input type="text" name="steps" class="step" id="step-three"><br />
         </div><br />
         <button id="add-step">Add Step</button> | <button id="remove-step">Remove Step</button><br /><br />
+        <p>Add a few memories of this recipe to make it more meaningful! </p>
         <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Enter a few memories about this recipe."></textarea><br />
         
         <input type="submit" value="Add To Recipes">

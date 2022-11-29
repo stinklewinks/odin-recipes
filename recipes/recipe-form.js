@@ -1,5 +1,4 @@
 
-//TODO: model a recipe database
 const recipes = {
     "Lasagna": {
         author: "Lisa Winkles",
@@ -27,22 +26,26 @@ const steps = document.querySelectorAll('.step');
 
 const outputForm = document.getElementById('output');
 
+
+// TODO: Add a counter event that keeps track of clicks on the Add Step button
 const addStep = () => {
     let step = document.createElement('input');
-    let pageBreak = document.createElement('br');
-    step.className = `step`;
-    step.id = 'new-step';
     stepsContainer.appendChild(step);
-    // stepsContainer.appendChild(pageBreak);
+    step.class= `step`;
+    step.id = 'new-step';
 }
-
-// TODO: Figure out the spacing & layout issues when adding steps. 
+ 
 const removeStep = (e) => {
     e.preventDefault();
     let step = document.querySelector('#new-step');
-    step.remove();
-    
+    if(step){
+        step.remove();
+    } else {
+        console.log('Nothing is happening...');
+    }
 }
+
+    // TODO: Figure out how to add proper space to added steps.
 
 const addToRecipes = (e) => {
     e.preventDefault();
