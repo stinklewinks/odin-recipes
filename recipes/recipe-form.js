@@ -3,11 +3,11 @@
 const recipes = {
     "Lasagna": {
         author: "Lisa Winkles",
-        ingredients: ['Canned Tomatoes', 'Onions', 'Ground Meat'],
+        ingredients: ['Canned Tomatoes', 'Onions', 'Ground Meat', 'Fresh Herbs', 'Sugar', 'Spices & Seasonings', 'Noodles', 'Cheese', 'Eggs'],
         prepTime: 45,
         cookTime: 25,
         totalTime: this.prepTime + this.cookTime,
-        steps: [],
+        steps: ['Cook the meat', 'Cook the noodles', 'Make the cheese layer', 'Assemble the Lasagna', 'Bake the Lasagna'],
         description: "This is a cool dish.",
         rating: 5,
         notes: ""
@@ -36,10 +36,9 @@ const addStep = () => {
     stepsContainer.appendChild(pageBreak);
 }
 
-// TODO: Figure out the spacing & layout issues
+// TODO: Figure out the spacing & layout issues when adding steps. 
 const removeStep = () => {
     let step = document.querySelector('#new-step');
-    let pageBreak = document.querySelector('br');
     step.remove();
 }
 
