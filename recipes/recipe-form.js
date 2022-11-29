@@ -33,13 +33,15 @@ const addStep = () => {
     step.className = `step`;
     step.id = 'new-step';
     stepsContainer.appendChild(step);
-    stepsContainer.appendChild(pageBreak);
+    // stepsContainer.appendChild(pageBreak);
 }
 
 // TODO: Figure out the spacing & layout issues when adding steps. 
-const removeStep = () => {
+const removeStep = (e) => {
+    e.preventDefault();
     let step = document.querySelector('#new-step');
     step.remove();
+    
 }
 
 const addToRecipes = (e) => {

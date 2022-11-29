@@ -6,7 +6,7 @@
 :root {
     --font-color: black;
     --default: 1.2rem;
-    --heading: 1.5rem;
+    --heading: 2.2rem;
 }
 
 
@@ -17,7 +17,14 @@ body {
     font-size: var(--default);
 }
 
-h1, h2, h3, h4, h5, h6, label {
+label {
+    font-family: playfair-display, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: playfair-display, serif;
     font-weight: 700;
     font-style: normal;
@@ -31,6 +38,25 @@ li {
 p, input, a {
     font-family: poppins, sans-serif;
     font-weight: 400;
+    font-size: 1.1rem;
     font-style: normal;
-}   
+    height: 2.5vh;    
+}
+
+input {
+    margin: 0.5rem 0;
+}
+
+#step-one:invalid {
+    color: red;
+}
+
+.step-container {
+    display: flex;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+}
 

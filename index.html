@@ -25,14 +25,14 @@
     <h2>Add a Recipe</h2>
     <form id="add-recipe">
         <label for="recipe-name">Name of Recipe: </label>
-        <input type="text" name="recipe-name" id="recipe-name"><br />
+        <input type="text" name="recipe-name" id="recipe-name" required><br />
         <label for="author">Recipe Author</label>
-        <input type="text" name="author" id="author"><br />
+        <input type="text" name="author" id="author" required><br />
         <label for="recipe-description">Description:</label><br />
         <textarea id="recipe-description" cols="30" rows="10" placeholder="Enter your recipe description here..."></textarea><br />
         <label for="steps">Steps:</label><br />
         <div id="steps-container">
-            <input type="text" name="steps" class="step" id="step-one"><br />
+            <input type="text" name="steps" class="step" id="step-one" required><br />
             <input type="text" name="steps" class="step" id="step-two"><br />
             <input type="text" name="steps" class="step" id="step-three"><br />
         </div><br />
