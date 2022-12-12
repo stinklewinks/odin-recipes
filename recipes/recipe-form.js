@@ -31,8 +31,16 @@ const outputForm = document.getElementById('output');
 const addStep = () => {
     let step = document.createElement('input');
     stepsContainer.appendChild(step);
-    step.class= `step`;
+    step.className += `step`;
     step.id = 'new-step';
+    const newStep = document.getElementById('new-step');
+    newStep.style.marginTop = '1rem';
+}
+
+const stepCounter = () => {
+    let counter = 0
+    counter++
+    console.log(counter);
 }
  
 const removeStep = (e) => {
@@ -69,4 +77,5 @@ const addToRecipes = (e) => {
 
 form.addEventListener('submit', addToRecipes);
 addStepButton.addEventListener('click', addStep);
+addStepButton.addEventListener('click', stepCounter);
 removeStepButton.addEventListener('click', removeStep);
