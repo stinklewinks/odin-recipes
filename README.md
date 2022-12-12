@@ -14,10 +14,14 @@ files so we can see how the project grows along the way.
 The main website will be for new comers to enjoy the recipes and projects of Mia. There will be a special Members Only area where family can access
 the social aspect of the app.
 
+The website will be developed with [React](https://reactjs.org)
+
 ### The Mobile App
 
 The mobile app will do most of the heavy lifting as far as user interaction is concerned. This is where most family members can add recipes, comment on
 current ones and converse with each other.
+
+In order for both the family and I to access the app with the least amount of maintaining, I have chosen to develop with [Flutter](https://flutter.dev). 
 
 ### The Book
 
